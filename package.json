@@ -1,0 +1,25 @@
+{
+  "name": "serialplayground",
+  "version": "1.0.0",
+  "description": "Serial terminal tool",
+  "main": "main.js",
+  "dependencies": {
+    "argparse": "^1.0.10",
+    "electron": "^9.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "electron .",
+    "format": "js-beautify -r *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vdominguez1993/SerialPlayGround.git"
+  },
+  "author": "Victor Dominguez",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/vdominguez1993/SerialPlayGround/issues"
+  },
+  "homepage": "https://github.com/vdominguez1993/SerialPlayGround#readme"
+}
