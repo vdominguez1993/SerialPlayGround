@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+    height: 97vh;
+    color: white;
+    font: 1rem Inconsolata, monospace;
+}
+
+.console {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font: 1rem Inconsolata, monospace;
+}
