@@ -10,7 +10,7 @@
   "devDependencies": {},
   "scripts": {
     "start": "electron .",
-    "format": "js-beautify -r *.js"
+    "format": "js-beautify -r *.js *.html *.css"
   },
   "repository": {
     "type": "git",

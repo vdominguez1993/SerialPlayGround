@@ -6,9 +6,24 @@ body {
 }
 
 .console {
+    position: absolute;
     background-color: black;
     height: 100%;
     width: 100%;
     color: white;
     font: 1rem Inconsolata, monospace;
+}
+
+.cursor {
+    position: absolute;
+    display: inline-block;
+    width: 1ch;
+    animation: blink 1s linear infinite alternate;
+}
+
+
+@keyframes blink {
+    50% {
+        background-color: white;
+    }
 }

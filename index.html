@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <title>Serial Playground</title>
     <link rel="stylesheet" type="text/css" href="serialstyle.css">
-    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-  </head>
-  <body>
-      <textarea id="inputconsole" class="console"></textarea>
-  </body>
+</head>
+
+<body onkeypress="keyInput(event)" onkeydown="keySpecial(event)">
+    Hello World!<br>
+    <div id="wrapper" style="position: relative;">
+        <text id="console" class="console">
+        </text>
+        <div id="cursor" class="cursor">&nbsp</div>
+    </div>
+</body>
+
+<script src="console.js"></script>
+
 </html>
