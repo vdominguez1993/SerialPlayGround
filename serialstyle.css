@@ -18,12 +18,13 @@ body {
     position: absolute;
     display: inline-block;
     width: 1ch;
-    animation: blink 1s linear infinite alternate;
+    border-width: thin;
+    border-color: white;
 }
 
 
 @keyframes blink {
     50% {
-        background-color: white;
+        backdrop-filter: invert(100%);
     }
 }

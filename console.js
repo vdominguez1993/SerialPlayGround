@@ -36,3 +36,14 @@ function updateCursorPosition() {
 }
 
 updateCursorPosition();
+
+window.onfocus = function() {
+    cursor.object.style.borderStyle = "none";
+    cursor.object.style.animation = "blink 1s linear infinite alternate";
+};
+
+window.onblur = function() {
+    // Make cursor look like it's not active
+    cursor.object.style.animation = "";
+    cursor.object.style.borderStyle = "solid";
+};
