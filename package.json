@@ -5,9 +5,12 @@
   "main": "main.js",
   "dependencies": {
     "argparse": "^1.0.10",
-    "electron": "^9.0.2"
+    "electron": "^9.0.2",
+    "serialport": "^9.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "electron-rebuild": "^1.11.0"
+  },
   "scripts": {
     "start": "electron .",
     "format": "js-beautify -r *.js *.html *.css"
