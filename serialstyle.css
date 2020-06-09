@@ -1,21 +1,32 @@
 body {
     background-color: black;
-    height: 97vh;
     color: white;
     font: 1rem Inconsolata, monospace;
 }
 
-.console {
-    position: absolute;
+.banner {
+    position: fixed;
+    padding-top: 3px;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    opacity: 80%;
+}
+
+.terminal_wrapper {
+    padding-top: calc(1ch + 4px);
+}
+
+.terminal {
     background-color: black;
     height: 100%;
     width: 100%;
     color: white;
     font: 1rem Inconsolata, monospace;
+    white-space: pre-line;
 }
 
 .cursor {
-    position: absolute;
     display: inline-block;
     width: 1ch;
     border-width: thin;

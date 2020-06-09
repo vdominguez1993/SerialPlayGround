@@ -1,10 +1,16 @@
-var SerialPort = require("serialport");
+const SerialPort = require("serialport");
+
+const port = new SerialPort('/dev/ttyUSB0', {
+    baudRate: 115200
+});
+
+port.on('data', function(data) {
+    print_to_console(data);
+});
 
 SerialPort.list().then(
     ports => {
-        ports.forEach(port => {
-            console.log(`${port.comName}\t${port.pnpId || ''}\t${port.manufacturer || ''}`)
-        })
+        console.log(ports);
     },
     err => {
         console.error('Error listing ports', err)
@@ -17,15 +23,31 @@ var cursor = {
     object: document.getElementById("cursor")
 };
 
-var text_area = document.getElementById("console");
+var text_area = document.getElementById("terminal");
+
+function print_to_console(data) {
+    console.log(data);
+    var text = new TextDecoder("utf-8").decode(data);
+    text_area.innerHTML += text;
+    moveCursor(text.length, 0);
+    window.scrollTo(0, document.body.scrollHeight);
+}
 
 function keyInput(event) {
-    console.log(event.keyCode);
-    var character = String.fromCharCode(event.keyCode);
-    console.log(character);
-
-    text_area.innerHTML += character;
-    moveCursor(1, 0);
+    var character;
+    var code = (event.keyCode ? event.keyCode : event.which);
+    if (code == 13) { //Enter keycode
+        character = "\r\n"
+    } else {
+        character = String.fromCharCode(event.keyCode);
+    }
+    console.log(`Write ${character}`);
+    port.write(character, function(err) {
+        if (err) {
+            return console.log('Error on write: ', err.message)
+        }
+        console.log('message written')
+    });
 }
 
 function keySpecial(event) {
