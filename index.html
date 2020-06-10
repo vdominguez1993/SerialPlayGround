@@ -9,10 +9,9 @@
 
 <body onkeypress="keyInput(event)" onkeydown="keySpecial(event)">
     <div class="banner">Hello World!</div>
-    <div id="wrapper" class="terminal_wrapper">
-        <text id="terminal" class="terminal"></text>
-        <div id="cursor" class="cursor">&nbsp</div>
-    </div>
+    <div class="textArea">
+        <!--8203 is the zero width space, this is done to acces the node -->
+        <text id="terminal" class="terminal">&#8203;<span id="cursor" class="cursor">&nbsp;</span>&#8203;</text></div>
 </body>
 
 <script src="console.js"></script>

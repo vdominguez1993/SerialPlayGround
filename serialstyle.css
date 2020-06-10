@@ -13,7 +13,7 @@ body {
     opacity: 80%;
 }
 
-.terminal_wrapper {
+.textArea {
     padding-top: calc(1ch + 4px);
 }
 
@@ -29,13 +29,15 @@ body {
 .cursor {
     display: inline-block;
     width: 1ch;
-    border-width: thin;
-    border-color: white;
+    outline-width: thin;
+    outline-color: white;
+    outline-offset: -1px;
 }
 
 
 @keyframes blink {
     50% {
-        backdrop-filter: invert(100%);
+        color: black;
+        background-color: white;
     }
 }
