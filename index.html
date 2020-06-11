@@ -8,7 +8,11 @@
 </head>
 
 <body onkeypress="keyInput(event)" onkeydown="keySpecial(event)">
-    <div class="banner">Hello World!</div>
+    <div class="banner">
+        <span>Port:
+            <select id="port"></select>
+        </span>
+    </div>
     <div class="textArea">
         <!--8203 is the zero width space, this is done to acces the node -->
         <text id="terminal" class="terminal">&#8203;<span id="cursor" class="cursor">&nbsp;</span>&#8203;</text></div>
