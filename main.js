@@ -19,6 +19,8 @@ parser.addArgument(
 
 var args = parser.parseArgs();
 
+app.disableHardwareAcceleration();
+
 function createWindow() {
     // Create the browser window.
     const win = new BrowserWindow({
